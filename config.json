@@ -1,0 +1,24 @@
+{
+	"button_shutdown":{
+		"port": 18,
+		"pull-up": true,
+		"active": false,
+		"execute": "shutdown -h now",
+		"timeout": 0
+	},
+	"button_reboot":{
+		"port": 19,
+		"pull-up": true,
+		"active": false,
+		"execute": "shutdown -r now",
+		"timeout": 0
+	},
+	"process_apache2":{
+		"port": 23,
+		"active": true,
+		"command": "apache2",
+		"onFound": "",
+		"onLost": "service restart apache2",
+		"timeout": 0
+	}
+}
